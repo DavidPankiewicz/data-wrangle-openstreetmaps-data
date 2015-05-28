@@ -1,0 +1,4 @@
+http://overpass-api.de/query_form.html
+(node(37.746299, -122.457169, 37.814679,-122.378548);<;);out meta;
+
+The area chosen is a portion of San Francisco: from the south border of the Mission to the north end of the peninsula, and from the east border of the Golden Gate Park east to the bay. I'll be moving there soon, so I wanted to take advantage of getting to know the area a little better. 

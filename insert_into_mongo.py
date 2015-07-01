@@ -21,10 +21,6 @@ def main(json_file):
     return
 
 file_name = "large-sf-square.osm.json"
-#file_name = "polk_sf_square.txt.json"
-"""
-Uncomment the line below to run.
-Toggle comments abvoe to change input files
-"""
-#main(file_name)
+
+main(file_name)
 

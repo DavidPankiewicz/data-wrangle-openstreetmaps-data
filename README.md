@@ -16,7 +16,7 @@ Specifically:
 ## The Dataset and Sourcing
 This dataset comes from the OpenStreetMap Foundation (OSM). (For more information on OSM, see [Wikipedia](https://en.wikipedia.org/wiki/OpenStreetMap) and the [OSM Wiki](http://wiki.openstreetmap.org/wiki/Main_Page)).
 
-My dataset contains location data on the northeast section of San Francisco (the portion of SF that I and many people are most familiar with). Roughly, the southern boundary is Cesar Chazvez St (the southern edge of the Mission) and the western boundary is the Presidio. Note the area inside the black rectangle on the map below:
+My dataset contains location data on the northeast section of San Francisco (the portion of SF that I and many people are most familiar with). Note the area inside the black rectangle on the map below:
 ![SFmap](http://i.imgur.com/weR1Hi9.png)
 
 The format of the data is OSM XML. The full dataset is ~ 130 MB, but a 10 MB sample of the data is available as `polk_sf_square.osm`.
@@ -38,6 +38,7 @@ For ease of insertion into MongoDB, I converted the format of the data from OSM 
 Analysis of the data was performed using MongoDb's query aggregation framework. 
 
 Examples queries:
+
 How many businesses in SF accept bitcoin?
 
     {"$match": {"payment": {"$exists":1}}},
@@ -62,9 +63,9 @@ See pages 4 and 5 of my PDF writeup.
 ## Summary of Python Files 
 
 In order of workflow:
-*   `data_audit.py`: Tool to generates a text file summary of the OSM file.  Used to decide what to code in `clean.py`
-*   `clean.py`: Cleans the data. (Imported into `create_json.py` and called from there)
-*   `create_json.py`: Takes in a raw OSM file, cleans it using `clean.py` functions, outputs data in JSON format.
+*   `data_audit.py`: Tool to generate a text file summary of the OSM file.  Used to decide what to code in `clean.py`
+*   `clean.py`: Contains functions to clean data. (Imported into `create_json.py`)
+*   `create_json.py`: Takes in a raw OSM file, cleans it using `clean.py` functions, outputs data in JSON format
 *   `insert_into_mongo.py`: Inserts a JSON file into MongoDB
-*   `query_sfmap_mongo.py`: Write simple MongoDB queries and print example results to manually spot check that all prior steps executed correctly
-*   `pipeline_sfmap.py`: Run aggregation operations against MongoDB collection, generating dataset level insights. 
+*   `query_sfmap_mongo.py`: Writes simple MongoDB queries and prints example results to manually spot check that all prior steps executed correctly
+*   `pipeline_sfmap.py`: Run aggregation operations against MongoDB collection, generating dataset level insights 

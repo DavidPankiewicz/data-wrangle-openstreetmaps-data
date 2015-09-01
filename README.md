@@ -2,7 +2,7 @@
 
 Note: This project was completed for a Udacity course. The writeup for Udacity is contained in the PDF above. The information contained in this README contains the context needed for those unfamiliar with the supporting Udacity course.
 
-##Introduction and Background:
+##Objective
 The objective of this project was to go “end to end” in performing an analysis.
 
 Specifically:

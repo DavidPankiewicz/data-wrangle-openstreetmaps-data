@@ -35,7 +35,7 @@ For more information on the specifics of auditing and cleaning this particular d
 For ease of insertion into MongoDB, I converted the format of the data from OSM XML to JSON. See `create_json.py`. 
 
 ## Analysis
-Analysis of the data was performed using MongoDb's query [aggregation pipelines framework](http://docs.mongodb.org/manual/core/aggregation-pipeline/). 
+Analysis of the data was performed using MongoDb's query [aggregation pipeline framework](http://docs.mongodb.org/manual/core/aggregation-pipeline/). 
 
 Examples queries:
 

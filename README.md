@@ -29,7 +29,7 @@ Note that I originally downloaded this data on May 24th, 2015. With the passage 
 ## Auditing and Cleaning
 To understand the data and have a sense of how I may need to clean it, I wrote functions to generate a text file with a summary of the dataset (see `data_audit.py`). After reviewing the text file, I decided where and how the data should be cleaned. My programmatic cleaning solutions are contained in `clean.py`.
 
-For more information on the specifics of auditing and cleaning this particular dataset, see pages 2 and 3 of the PDF of my writeup.
+Cleaning took various forms. One was fixing typos (e.g., unifying everything under the city tag to be "San Francisco"). Others included decding on common formats for street types ("Street" and "St." become "St") and choosing a naming convention for major roads (e.g. Van Ness becomes Van Ness Ave) and making all these changes programmatically where needed. For more notes, see page 2 of the writeup.
 
 ## Conversion and Storage
 For ease of insertion into MongoDB, I converted the format of the data from OSM XML to JSON. See `create_json.py`. 
@@ -58,7 +58,9 @@ What are the most common types of restaurants in SF?
 For more queries, see pages 3 and 4 of the PDF writeup.
 
 ## Limitations and Future Work
-See pages 4 and 5 of my PDF writeup. 
+One of the major limitations of this dataset is that it is likely to be incomplete or out of date. Due to it's open source nature, the data is only as good as the contributions made. Although people have built bots to automatically add to the data, there is no guarantee of validity or completeness. Furthermore, there are little incentives for the maintenance of this dataset except the good of the community. In short, it is difficult to rely on this data as an end all, be all. 
+
+For future work, this data could be used to power the backend of a Yelp-like application in terms of info about businesses and directions.  
 
 ## Summary of Python Files 
 

@@ -1,6 +1,6 @@
 # Data Wrangling and Cleaning using San Francisco Map Data
 
-Note: This project was completed for a Udacity course. The writeup for Udacity is contained in the PDF above. The information contained in this README contains the context needed for those unfamiliar with the supporting Udacity course.
+Note: This project was completed for a Udacity course. The information contained in this README contains the context needed for those unfamiliar with the supporting Udacity course. The PDF of the writeup for Udacity is [here](https://github.com/DavidPankiewicz/data-wrangle-openstreetmaps-data/blob/master/David%20Pankiewicz%20-%20OpenstreetMaps%20Project%20Writeup.pdf).
 
 ##Objective
 The objective of this project was to go “end to end” in performing an analysis.
